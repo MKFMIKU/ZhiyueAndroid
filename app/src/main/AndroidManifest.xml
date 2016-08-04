@@ -15,6 +15,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".init.Guide" />
+        <activity android:name=".init.login" />
+        <activity android:name=".init.sign"></activity>
     </application>
 
 </manifest>

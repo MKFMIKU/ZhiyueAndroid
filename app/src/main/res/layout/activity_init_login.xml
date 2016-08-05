@@ -12,10 +12,11 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/idInput"
+        android:id="@+id/emailInput"
         android:layout_above="@+id/passwdInput"
         android:layout_alignStart="@+id/passwdInput"
-        android:layout_alignEnd="@+id/passwdInput" />
+        android:layout_alignEnd="@+id/passwdInput"
+        android:hint="Email" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -24,7 +25,8 @@
         android:ems="10"
         android:id="@+id/passwdInput"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:hint="Password" />
 
     <Button
         android:layout_width="wrap_content"

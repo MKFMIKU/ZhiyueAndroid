@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">zhiyue</string>
+    <string name="bar_public">广场</string>
+    <string name="bar_recommn">推荐</string>
+    <string name="bar_grid">格子</string>
+    <string name="bar_user">用户</string>
 </resources>

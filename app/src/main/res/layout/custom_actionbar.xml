@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_vertical|center|center_horizontal"
+    android:orientation="horizontal"
+    android:paddingLeft="20dp"
+    android:paddingRight="10dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/publicLogo"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/icon_public" />
+
+        <TextView
+            android:text="@string/bar_public"
+            android:textColor="#fff"
+            android:textSize="12dp"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/recommnLogo"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/icon_recommn" />
+
+        <TextView
+            android:text="@string/bar_recommn"
+            android:textColor="#fff"
+            android:textSize="12dp"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/gridLogo"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/icon_grid" />
+
+        <TextView
+            android:text="@string/bar_grid"
+            android:textColor="#fff"
+            android:textSize="12dp"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/userLogo"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/icon_user" />
+
+        <TextView
+            android:text="@string/bar_user"
+            android:textColor="#fff"
+            android:textSize="12dp"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

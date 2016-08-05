@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.kffuck.mikum.zhiyue">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -15,6 +17,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".init.Guide" />
+        <activity android:name=".init.login" />
+        <activity android:name=".init.sign"></activity>
     </application>
 
 </manifest>

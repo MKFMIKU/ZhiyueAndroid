@@ -10,9 +10,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.kffuck.mikum.zhiyue.init.Guide;
 import com.kffuck.mikum.zhiyue.lib.CustomBar;
+import com.kffuck.mikum.zhiyue.lib.UserCard;
 import com.kffuck.mikum.zhiyue.model.AccountObj;
 import com.kffuck.mikum.zhiyue.model.UserObj;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -35,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         InitPager();
         Init();
 
+        new RecommnActivity();
         myUser = AccountObj.loadAccount(this);
 
     }

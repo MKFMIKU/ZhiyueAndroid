@@ -19,6 +19,7 @@
         android:gravity="center">
 
         <at.markushi.ui.CircleButton
+            android:id="@+id/clearButton"
             android:layout_marginRight="64dp"
             android:src="@drawable/icon_clear"
             app:cb_color="#63ca60"
@@ -27,6 +28,7 @@
             app:cb_pressedRingWidth="12dip" />
 
         <at.markushi.ui.CircleButton
+            android:id="@+id/doneButton"
             android:layout_marginLeft="64dp"
             android:src="@drawable/icon_add"
             app:cb_color="#55ACEE"

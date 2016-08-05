@@ -4,4 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <com.kffuck.mikum.zhiyue.lib.UserCard
+        android:layout_margin="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="360dp">
+
+    </com.kffuck.mikum.zhiyue.lib.UserCard>
 </LinearLayout>

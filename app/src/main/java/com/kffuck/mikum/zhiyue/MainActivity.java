@@ -9,16 +9,21 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.kffuck.mikum.zhiyue.init.Guide;
 import com.kffuck.mikum.zhiyue.lib.CustomBar;
 import com.kffuck.mikum.zhiyue.model.AccountObj;
+import com.kffuck.mikum.zhiyue.model.UserObj;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private List<View> viewList;
+    private UserObj myUser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,8 +33,18 @@ public class MainActivity extends AppCompatActivity {
         //App启动初始化
         CheckLogin();
         InitPager();
+        Init();
+
+        myUser = AccountObj.loadAccount(this);
+
     }
 
+
+    //各种杂项的初始化
+    private void Init() {
+        ImageLoaderConfiguration configuration = ImageLoaderConfiguration.createDefault(this);
+        ImageLoader.getInstance().init(configuration);
+    }
 
     //检查是否登陆，没登陆跳转到init块
     private void CheckLogin() {

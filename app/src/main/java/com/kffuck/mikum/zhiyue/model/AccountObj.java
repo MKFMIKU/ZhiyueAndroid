@@ -51,5 +51,16 @@ public class AccountObj {
         return file.exists();
     }
 
+    public static void loginOut(Context context) {
+        File dir = context.getFilesDir();
+        String[] fileNameList = dir.list();
+        for (String item : fileNameList) {
+            File file = new File(dir, item);
+            if (file.exists() && !file.isDirectory()) {
+                file.delete();
+            }
+        }
+    }
+
 
 }

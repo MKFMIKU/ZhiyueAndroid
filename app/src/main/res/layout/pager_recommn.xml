@@ -1,17 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
 
-        <com.kffuck.mikum.zhiyue.lib.UserCard
+    <android.support.v7.widget.CardView
             android:id="@+id/UserCard"
             android:layout_margin="40dp"
             android:layout_width="match_parent"
             android:layout_height="360dp">
 
-        </com.kffuck.mikum.zhiyue.lib.UserCard>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:src="@drawable/img_background"
+                android:scaleType="fitXY" />
+
+            <LinearLayout
+                android:layout_marginTop="-32dip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <at.markushi.ui.CircleButton
+                    android:id="@+id/clearButton"
+                    android:layout_marginRight="64dp"
+                    android:src="@drawable/icon_clear"
+                    app:cb_color="#63ca60"
+                    android:layout_width="64dip"
+                    android:layout_height="64dip"
+                    app:cb_pressedRingWidth="12dip" />
+
+                <at.markushi.ui.CircleButton
+                    android:id="@+id/doneButton"
+                    android:layout_marginLeft="64dp"
+                    android:src="@drawable/icon_add"
+                    app:cb_color="#55ACEE"
+                    android:layout_width="64dip"
+                    android:layout_height="64dip"
+                    app:cb_pressedRingWidth="12dip" />
+
+            </LinearLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/avatarCard"
+                android:src="@drawable/avatar"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_marginTop="-96dp"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#ffffff"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/nameCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="梅康夫"
+                android:textSize="24dp"
+                android:textColor="#505050"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/nicknameCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:text="\@MKFMIKU"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/schoolCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="江西师范大学"
+                android:layout_gravity="center_horizontal" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/ProfileCard"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+    </LinearLayout>
 
 
 </LinearLayout>

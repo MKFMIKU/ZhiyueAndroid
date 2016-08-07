@@ -5,8 +5,8 @@ import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 
-public class AccountHttp {
-    private static final String BASE_URL = Global.HOST + "/api/account";
+public class SquareHttp {
+    private static final String BASE_URL = Global.HOST + "/api/square";
 
     private static AsyncHttpClient client = new AsyncHttpClient();
 
@@ -22,4 +22,3 @@ public class AccountHttp {
         return BASE_URL + relativeUrl;
     }
 }
-

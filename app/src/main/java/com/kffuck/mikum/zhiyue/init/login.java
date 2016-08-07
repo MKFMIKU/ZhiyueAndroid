@@ -1,7 +1,6 @@
 package com.kffuck.mikum.zhiyue.init;
 
-import android.accounts.Account;
-import android.content.Context;
+
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,15 +15,13 @@ import com.kffuck.mikum.zhiyue.R;
 import com.kffuck.mikum.zhiyue.model.AccountObj;
 import com.kffuck.mikum.zhiyue.model.UserObj;
 import com.kffuck.mikum.zhiyue.network.AccountHttp;
-import com.loopj.android.http.AsyncHttpClient;
-import com.loopj.android.http.AsyncHttpResponseHandler;
+
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 
-import org.json.JSONException;
+
 import org.json.JSONObject;
 
-import java.io.FileNotFoundException;
 
 import cz.msebera.android.httpclient.Header;
 
@@ -79,8 +76,8 @@ public class login extends AppCompatActivity {
                         if (msg.equals("ok")) {
                             JSONObject data = response.getJSONObject("result");
                             UserObj myUser = new UserObj(data);
+                            Toast.makeText(getApplicationContext(), "Welcome " + myUser.nickname, Toast.LENGTH_SHORT).show();
                             AccountObj.saveAccount(getApplicationContext(), myUser);
-                            Toast.makeText(getApplicationContext(), "Login Success", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent().setClass(login.this, MainActivity.class));
                         }
                     } else

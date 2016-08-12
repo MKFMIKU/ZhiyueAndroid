@@ -3,9 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorPrimaryDark"
     tools:context="com.kffuck.mikum.zhiyue.MainActivity">
-
-
     <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent">

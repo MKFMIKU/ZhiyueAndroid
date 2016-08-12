@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.dd.processbutton.iml.ActionProcessButton;
 import com.kffuck.mikum.zhiyue.MainActivity;
 import com.kffuck.mikum.zhiyue.R;
 import com.kffuck.mikum.zhiyue.model.AccountObj;
@@ -27,15 +28,16 @@ import cz.msebera.android.httpclient.Header;
 
 public class login extends AppCompatActivity {
 
-    private Button loginAction;
     private EditText emailInput, passwordInput;
+    private ActionProcessButton loginAction;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_init_login);
 
-        loginAction = (Button) findViewById(R.id.loginAction);
+        loginAction = (ActionProcessButton) findViewById(R.id.loginAction);
+        loginAction.setMode(ActionProcessButton.Mode.PROGRESS);
 
         emailInput = (EditText) findViewById(R.id.emailInput);
         passwordInput = (EditText) findViewById(R.id.passwdInput);
@@ -68,12 +70,21 @@ public class login extends AppCompatActivity {
         AccountHttp.post("/login", requestParams, new JsonHttpResponseHandler() {
 
             @Override
+            public void onStart() {
+                loginAction.setMode(ActionProcessButton.Mode.ENDLESS);
+                loginAction.setProgress(1);
+                emailInput.setEnabled(false);
+                passwordInput.setEnabled(false);
+            }
+
+            @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 try {
                     int code = response.getInt("code");
                     String msg = response.getString("msg");
                     if (code == 200) {
                         if (msg.equals("ok")) {
+                            loginAction.setMode(ActionProcessButton.Mode.ENDLESS);
                             JSONObject data = response.getJSONObject("result");
                             UserObj myUser = new UserObj(data);
                             Toast.makeText(getApplicationContext(), "Welcome " + myUser.nickname, Toast.LENGTH_SHORT).show();
@@ -91,6 +102,7 @@ public class login extends AppCompatActivity {
             @Override
             public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
                 Log.w("NetWork", throwable);
+                loginAction.setProgress(-1);
                 Toast.makeText(getApplicationContext(), "NetWork Error", Toast.LENGTH_SHORT).show();
             }
         });
